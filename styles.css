@@ -27,7 +27,7 @@
 
 /*
   Body styling.
-  Tahoma is used as the main body font, as requested.
+  Tahoma is used as the main body font.
 */
 body {
   font-family: Tahoma, Arial, sans-serif;
@@ -285,32 +285,32 @@ h3,
 /*
   Individual module colours using the defined palette.
 */
-.module-card-green {
+.card-green {
   background-color: var(--green-primary);
   color: var(--dark);
 }
 
-.module-card-lime {
+.card-lime {
   background-color: var(--green-secondary);
   color: var(--white);
 }
 
-.module-card-yellow {
+.card-yellow {
   background-color: var(--yellow);
   color: var(--dark);
 }
 
-.module-card-blue {
+.card-blue {
   background-color: var(--blue);
   color: var(--white);
 }
 
-.module-card-dark {
+.card-dark {
   background-color: var(--dark);
   color: var(--white);
 }
 
-.module-card-outline {
+.card-outline {
   background-color: var(--white);
   border-color: var(--dark);
   color: var(--dark);
@@ -319,9 +319,9 @@ h3,
 /*
   Ensures headings inside darker cards remain readable.
 */
-.module-card-lime h3,
-.module-card-blue h3,
-.module-card-dark h3 {
+.card-lime h3,
+.card-blue h3,
+.card-dark h3 {
   color: var(--white);
 }
 
