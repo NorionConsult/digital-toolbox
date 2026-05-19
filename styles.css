@@ -1,0 +1,413 @@
+/* 
+  Colour palette defined for the website.
+  These variables make it easy to reuse and update colours across the site.
+*/
+:root {
+  --green-primary: #09bb88;
+  --green-secondary: #41a552;
+  --yellow: #ffcc00;
+  --blue: #1d3d8f;
+  --dark: #0A2E36;
+
+  --white: #ffffff;
+  --light-bg: #f7f7f2;
+  --soft-border: #d8ddd8;
+  --text: #1f2a2e;
+}
+
+/*
+  Basic reset.
+  This removes default spacing and ensures box sizing is easier to manage.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Body styling.
+  Tahoma is used as the main body font, as requested.
+*/
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+/*
+  General layout container.
+  Keeps content centred and prevents it from becoming too wide on large screens.
+*/
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/*
+  Typography.
+  Bahnschrift is included as a title font fallback.
+  Bebas NEUIC may need to be added manually if you have a licensed font file.
+*/
+h1,
+h2,
+h3,
+.site-logo {
+  font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+}
+
+/*
+  Georgia is used as a subtitle-style fallback.
+  Bree Serif can be added through a font import or local font file if available.
+*/
+.eyebrow,
+.hero-text,
+.section-intro p {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/*
+  Header.
+  The sticky header remains visible when users scroll.
+*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--soft-border);
+}
+
+/*
+  Header layout.
+  Uses flexbox to place the logo on the left and navigation on the right.
+*/
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+/*
+  Site logo.
+*/
+.site-logo {
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/*
+  Navigation links.
+*/
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--green-primary);
+}
+
+/*
+  Hero section.
+  Large top area introducing the catalogue.
+*/
+.hero {
+  background:
+    linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
+    var(--light-bg);
+  padding: 96px 0 88px;
+}
+
+/*
+  Hero content.
+  Maximum width keeps the text readable.
+*/
+.hero-content {
+  max-width: 780px;
+}
+
+/*
+  Small label above headings.
+*/
+.eyebrow {
+  color: var(--green-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+/*
+  Main page heading.
+*/
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+/*
+  Hero paragraph.
+*/
+.hero-text {
+  font-size: 1.25rem;
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+/*
+  Primary call-to-action button.
+*/
+.primary-button {
+  display: inline-block;
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background-color: var(--blue);
+}
+
+/*
+  Modules section.
+*/
+.modules-section {
+  padding: 88px 0;
+  background-color: var(--white);
+}
+
+/*
+  Section introduction.
+*/
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+
+.section-intro h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/*
+  Module grid.
+  Automatically adapts to screen width.
+*/
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/*
+  Module card base styling.
+*/
+.module-card {
+  min-height: 320px;
+  padding: 32px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*
+  Simple hover effect for interactivity.
+*/
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(10, 46, 54, 0.12);
+}
+
+/*
+  Module number.
+*/
+.module-number {
+  font-weight: 700;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/*
+  Module title.
+*/
+.module-card h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/*
+  Module paragraph.
+*/
+.module-card p {
+  margin-bottom: 28px;
+}
+
+/*
+  Module link.
+*/
+.module-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  width: fit-content;
+}
+
+.module-link:hover {
+  opacity: 0.75;
+}
+
+/*
+  Individual module colours using the defined palette.
+*/
+.module-card-green {
+  background-color: var(--green-primary);
+  color: var(--dark);
+}
+
+.module-card-lime {
+  background-color: var(--green-secondary);
+  color: var(--white);
+}
+
+.module-card-yellow {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+
+.module-card-blue {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.module-card-dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.module-card-outline {
+  background-color: var(--white);
+  border-color: var(--dark);
+  color: var(--dark);
+}
+
+/*
+  Ensures headings inside darker cards remain readable.
+*/
+.module-card-lime h3,
+.module-card-blue h3,
+.module-card-dark h3 {
+  color: var(--white);
+}
+
+/*
+  About section.
+*/
+.about-section {
+  padding: 72px 0;
+  background-color: var(--light-bg);
+}
+
+/*
+  About layout.
+*/
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+}
+
+/*
+  Footer.
+*/
+.site-footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 32px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-footer a {
+  color: var(--yellow);
+}
+
+/*
+  Responsive styling for tablets and mobile screens.
+*/
+@media (max-width: 900px) {
+  .module-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+  Responsive styling for small mobile screens.
+*/
+@media (max-width: 640px) {
+  .header-content,
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 72px 0;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card {
+    min-height: 260px;
+  }
+}
