@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Basic page setup.
+    The charset ensures special characters display correctly.
+    The viewport tag makes the site responsive on mobile devices.
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    Page title shown in the browser tab.
+    Change this to the final name of the digital tool catalogue if needed.
+  -->
+  <title>Digital Tool Catalogue</title>
+
+  <!--
+    Link to the external CSS file.
+    Keeping styles in a separate file makes the website easier to maintain.
+  -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!--
+    Header section.
+    Contains the site name and a simple navigation menu.
+  -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="site-logo">Digital Tool Catalogue</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#modules">Modules</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    Hero section.
+    This is the main introduction at the top of the page.
+  -->
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">A practical overview of digital tools</p>
+
+        <h1>Explore the digital tool catalogue by module</h1>
+
+        <p class="hero-text">
+          This catalogue provides a structured overview of digital tools, grouped into six modules.
+          Each module can be used to organise tools, methods, guidance, and resources for different
+          parts of the user journey.
+        </p>
+
+        <a href="#modules" class="primary-button">Explore modules</a>
+      </div>
+    </section>
+
+    <!--
+      Modules section.
+      The six cards below represent the six catalogue modules.
+      Replace the placeholder descriptions with your final module content.
+    -->
+    <section id="modules" class="modules-section">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">Catalogue structure</p>
+          <h2>Six modules</h2>
+          <p>
+            Each module can contain selected tools, descriptions, target users, links, and practical
+            guidance on how the tools can be applied.
+          </p>
+        </div>
+
+        <div class="module-grid">
+          <!-- Module 1 -->
+          <article class="module-card module-card-green">
+            <div class="module-number">01</div>
+            <h3>Module 1</h3>
+            <p>
+              Use this module to introduce the first group of tools and explain what users can find here.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+
+          <!-- Module 2 -->
+          <article class="module-card module-card-lime">
+            <div class="module-number">02</div>
+            <h3>Module 2</h3>
+            <p>
+              Use this module for guidance, methods, templates, or tools related to the second topic area.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+
+          <!-- Module 3 -->
+          <article class="module-card module-card-yellow">
+            <div class="module-number">03</div>
+            <h3>Module 3</h3>
+            <p>
+              Use this module to present another set of tools, including short descriptions and links.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+
+          <!-- Module 4 -->
+          <article class="module-card module-card-blue">
+            <div class="module-number">04</div>
+            <h3>Module 4</h3>
+            <p>
+              Use this module to organise tools that support implementation, decision-making, or learning.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+
+          <!-- Module 5 -->
+          <article class="module-card module-card-dark">
+            <div class="module-number">05</div>
+            <h3>Module 5</h3>
+            <p>
+              Use this module to highlight tools that require deeper explanation or technical guidance.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+
+          <!-- Module 6 -->
+          <article class="module-card module-card-outline">
+            <div class="module-number">06</div>
+            <h3>Module 6</h3>
+            <p>
+              Use this module for additional resources, supporting materials, or cross-cutting tools.
+            </p>
+            <a href="#" class="module-link">View module</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      About section.
+      This can be used to explain the purpose of the catalogue.
+    -->
+    <section id="about" class="about-section">
+      <div class="container about-content">
+        <div>
+          <p class="eyebrow">About the catalogue</p>
+          <h2>Designed for easy navigation</h2>
+        </div>
+
+        <p>
+          The catalogue is structured to help users quickly identify relevant digital tools.
+          The modular format makes it possible to expand the site over time by adding new tools,
+          categories, links, and case examples.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!--
+    Footer section.
+    Includes basic project information and a placeholder contact link.
+  -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <p>Digital Tool Catalogue</p>
+      <p>
+        Contact:
+        <a href="mailto:example@example.com">example@example.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
