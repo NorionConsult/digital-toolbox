@@ -324,6 +324,15 @@ h3,
 .card-dark h3 {
   color: var(--white);
 }
+/*
+  Sector section.
+*/
+.sector-section {
+  padding: 88px 0;
+  background-color:
+    linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
+    var(--white);
+}
 
 /*
   Sector grid.
