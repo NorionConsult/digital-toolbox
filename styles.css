@@ -411,3 +411,115 @@ h3,
     min-height: 260px;
   }
 }
+/* 
+  Module subpage layout.
+  These styles are used on the individual module pages.
+*/
+
+.module-page {
+  min-height: 100vh;
+  background-color: var(--light-bg);
+}
+
+/*
+  Subpage hero section.
+  Provides a clear heading and introduction for each module.
+*/
+.subpage-hero {
+  padding: 88px 0 72px;
+  background:
+    linear-gradient(135deg, rgba(9, 187, 136, 0.16), rgba(29, 61, 143, 0.12)),
+    var(--light-bg);
+}
+
+/*
+  Keeps the module page text readable.
+*/
+.subpage-content {
+  max-width: 760px;
+}
+
+/*
+  Main title on each module subpage.
+*/
+.subpage-content h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/*
+  Introductory text under the module heading.
+*/
+.subpage-intro {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  margin-bottom: 36px;
+}
+
+/*
+  Download button section.
+  The buttons are placed side by side on larger screens and stacked on mobile.
+*/
+.download-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/*
+  Shared button styling.
+*/
+.download-button {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--dark);
+}
+
+/*
+  Primary download button for the module PDF.
+*/
+.download-button.primary {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+/*
+  Secondary download button for the full tool catalogue.
+*/
+.download-button.secondary {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+/*
+  Hover effects for download buttons.
+*/
+.download-button.primary:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.download-button.secondary:hover {
+  background-color: var(--yellow);
+}
+
+/*
+  Simple back link to the front page.
+*/
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
+}
+
+.back-link:hover {
+  color: var(--green-primary);
+}
